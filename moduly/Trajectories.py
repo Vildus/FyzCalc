@@ -1,37 +1,3 @@
-# Dokumentace
-#
-# FYZ Kalkulátor by Rotundista
-# ver 1.2
-# Program počítá s g=9.8 m/s2 (zatím nezměnitelné)
-# Program pošítá pouze v SI jednotkách      ..zatím
-# Výchozí hodnoty jsou jako default 0
-# Program je schopný se vypořádat s debilitou uživatele
-# Všechny příkazy:
-# -----------------------
-# quit
-#   -Ukončí program
-# set <parametr> <hodnota>
-#   -Nastaví parametr na hodnotu
-#   -Hodnata může být celá nebo desetinná, kladná nebo záporná
-#   -Povolené parametry jsou:
-#       v0 Počáteční rychlost (kladná-nahoru záporná-dolů)
-#       h  Počáteční výška
-#   -např. set v0 -3.6
-# status
-#   -Zobrazí aktuální zadané hodnoty
-# calc <stav>
-#   -Vypočítá zadaný stav
-#   -Možné stavy jsou:
-#      max    Vypočítá maximální výšku a čas, za jaký se k ní předmět dostane
-#      impact Vypočítá, za jakou dobu a v jaké rychlosti narazí předmět do země
-# sim <parametr> <hodnota>
-#   -Asi nejvíc op příkaz
-#   -Funguje podle parametru
-#   -Parametry:
-#      t Vypočítá výšku a rychlost dosaženou za zadaný čas
-#      v Vypočítá čas, za který předmět dosáhne zadané rychlosti (Pozor na znaménko, směr dolů je záporný)
-#      h Vypočítá, za jak douho předmět dosáhne zadané výšky
-
 import math
 import io
 

@@ -6,6 +6,7 @@ def _load(modul):
     module = modul
     print("\nByl načten modul " + modul + "\n")
 
+
 def load(para):
     global module
     if len(para) != 1:
@@ -16,7 +17,7 @@ def load(para):
             _load("Trajectory")
         else:
             print("Modul " + target + " neexistuje!")
-    
+
 
 def execute(comm):
     spl = comm.split()
@@ -35,11 +36,12 @@ def execute(comm):
             print("Příkaz " + com + " neexistuje!\nPro seznam příkazů použijte příkaz help")
     return 0
 
+
 print(
     "FyzCalc ver. 1.0\n"
     "Pro tutoriál použijte příkaz help\n"
     "By Rotundista\n"
-    )
+)
 run = True
 default_mod = "FyzCalc"
 module = default_mod

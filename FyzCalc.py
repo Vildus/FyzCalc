@@ -1,4 +1,4 @@
-from Trajectories import Trajectory, cat
+from moduly.Trajectories import Trajectory, cat
 
 
 def _load(modul):

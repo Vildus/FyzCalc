@@ -155,21 +155,23 @@ class Trajectory:
         return 0
 
 
-print(
+
+if __name__ == "__main__":
+    print(
     "Kalkulačka volného pádu a svislého hodu\n"
     "Dokumentace se nachází ve zdrojovém kódu\n"
     "By Rotundista\n"
     "ver 1.2\n"
-)
-run = True
-traj = Trajectory()
-while run:
-    try:
-        command = input("VP>")
-        ret = traj.execute(command)
-        if ret == "term":
-            run = False
-    except KeyboardInterrupt:
-        print("Na ukončení je potřeba použít příkaz quit")
-    except:
-        print("Došlo k neznámému problému")
+    )
+    run = True
+    traj = Trajectory()
+    while run:
+        try:
+            command = input("VP>")
+            ret = traj.execute(command)
+            if ret == "term":
+                run = False
+        except KeyboardInterrupt:
+            print("Na ukončení je potřeba použít příkaz quit")
+        except:
+            print("Došlo k neznámému problému")

@@ -1,15 +1,13 @@
-Dokumentace:
 
-FYZ Kalkulátor by Rotundista
-ver 1.2
-Program počítá s g=9.8 m/s2 (zatím nezměnitelné)
-Program pošítá pouze v SI jednotkách      ..zatím
+Modul Trajectories:
+
+Modul počítá s g=9.8 m/s2 (zatím nezměnitelné)
+Modul pošítá pouze v SI jednotkách      ..zatím
 Výchozí hodnoty jsou jako default 0
-Program je schopný se vypořádat s debilitou uživatele
 Všechny příkazy:
 -----------------------
 quit
-  -Ukončí program
+  -Ukončí modul
 set <parametr> <hodnota>
   -Nastaví parametr na hodnotu
   -Hodnata může být celá nebo desetinná, kladná nebo záporná

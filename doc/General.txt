@@ -1,0 +1,9 @@
+
+Globální příkazy:
+-------------------
+quit
+  -Ukončí program
+load <modul>
+  -Načte modul
+  -Moduly:
+    Traj   Výpočet volného pádu/ vertikálního hodu

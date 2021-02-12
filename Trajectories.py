@@ -33,7 +33,13 @@
 #      h Vypočítá, za jak douho předmět dosáhne zadané výšky
 
 import math
+import io
 
+
+def cat(soubor):
+    f = io.open(soubor, mode="r", encoding="utf-8")
+    print(f.read())
+    f.close()
 
 class Trajectory:
     def __init__(self):
@@ -57,8 +63,10 @@ class Trajectory:
             self.calc(para)
         elif com == "sim":
             self.sim(para)
+        elif com == "help":
+            cat("doc/Trajectories.txt")
         else:
-            print("Příkaz " + com + " neexistuje")
+            print("Příkaz " + com + " neexistuje\nPro seznam příkazů použijte příkaz help")
         return 0
 
     def set(self, para):

@@ -1,4 +1,5 @@
-from Trajectories import Trajectory
+from Trajectories import Trajectory, cat
+
 
 def _load(modul):
     global module
@@ -27,28 +28,37 @@ def execute(comm):
         return "term"
     elif com == "load":
         load(para)
+    elif com == "help":
+        cat("doc/General.txt")
+    else:
+        if len(spl) > 0:
+            print("Příkaz " + com + " neexistuje!\nPro seznam příkazů použijte příkaz help")
     return 0
 
 print(
     "FyzCalc ver. 1.0\n"
-    "Dokumentace se nachází ve složce Doc\n"
+    "Pro tutoriál použijte příkaz help\n"
     "By Rotundista\n"
     )
 run = True
-module = "FyzCalc"
+default_mod = "FyzCalc"
+module = default_mod
 while run:
     try:
         command = input(module + ">")
-        if module == "FyzCalc":
+        if module == default_mod:
             ret = execute(command)
+            if ret == "term":
+                run = False
             if module == "Trajectory":
                 traj = Trajectory()
         elif module == "Trajectory":
             ret = traj.execute(command)
+            if ret == "term":
+                print("Modul Trajectories ukončen")
+                module = default_mod
         else:
-            print("Problém s modulem")
-            run = False
-        if ret == "term":
+            print("\nFATAL ERROR 1\n")
             run = False
     except KeyboardInterrupt:
         print("Na ukončení je potřeba použít příkaz quit")

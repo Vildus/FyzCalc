@@ -40,7 +40,7 @@ def execute(comm):
 print(
     "FyzCalc ver. 1.0\n"
     "Pro tutoriál použijte příkaz help\n"
-    "By Rotundista\n"
+    "By VP 2021\n"
 )
 run = True
 default_mod = "FyzCalc"
